@@ -10,17 +10,17 @@
 			url: 'http://www.classnamer.com/index.txt',
 			type: 'GET',
 			crossDomain: true,
-			contentType: 'text/plain',
+			contentType: 'json',
 			headers: {
-				'Access-Control-Allow-Origin': 'https://ahmadhakroosh.github.io' 
+				'Access-Control-Allow-Origin': '*' 
 			},
 			
-			success   : function(data) { 
-				console.log(data);
+			success: function(data) { 
+				alert(data);
 			},
 
 			error: function(xhr) {
-				console.log(xhr);
+				alert(xhr);
 			}
 		});
 	</script>
