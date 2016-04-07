@@ -8,7 +8,7 @@
 	<script type="text/javascript">
 		var data;
 		var request = new XMLHttpRequest();
-		request.open("GET", "http://www.classnamer.com/index.txt", true);
+		request.open("GET", "http://www.classnamer.com/index.txt");
 		request.onreadystatechange = function () {
 			if (request.readyState == 4 && request.status == 200) {
 				data = request.responseText;
