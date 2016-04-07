@@ -6,12 +6,15 @@
 </head>
 <body>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+		var jsonObj;
 		$.ajax({
-			url: 'http://ahmad-h.com/',
+			url: 'http://ahmadhakroosh.github.io/webapp/data/config.json',
+			type: 'GET',
 			crossDomain: true,
-			dataType: 'jsonp',
+			dataType: 'json',
 			success: function(data) { 
 				alert(data);
+				jsonObj = data;
 			},
 			error: function(xhr) {
 				alert(xhr);
