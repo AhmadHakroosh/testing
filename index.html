@@ -8,17 +8,11 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
 		$.ajax({
 			url: 'http://ahmad-h.com/',
-			type: 'GET',
 			crossDomain: true,
 			dataType: 'jsonp',
-			headers: {
-				'Access-Control-Allow-Origin': '*' 
-			},
-			
 			success: function(data) { 
 				alert(data);
 			},
-
 			error: function(xhr) {
 				alert(xhr);
 			}
