@@ -5,21 +5,17 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
-		var jsonObj;
-		$.ajax({
-			url: 'http://ahmadhakroosh.github.io/webapp/data/config.json',
-			type: 'GET',
-			crossDomain: true,
-			dataType: 'json',
-			success: function(data) { 
-				alert(data);
-				jsonObj = data;
-			},
-			error: function(xhr) {
-				alert(xhr);
+	<script type="text/javascript">
+		var data;
+		var request = new XMLHttpRequest();
+		request.open("GET", "http://www.classnamer.com/index.txt", true);
+		request.send();
+
+		request.onreadystatechange = function () {
+			if (request.readyState == 4 && request.status == 200) {
+				data = JSON.parse(request.responseText);
 			}
-		});
+		};
 	</script>
 </body>
 </html>
