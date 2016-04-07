@@ -11,10 +11,10 @@
 			url: 'http://classnamer.com/index.txt',
 			type: 'GET',
 			headers: {
-				'Access-Control-Allow-Origin': 'http://ahmadhakroosh.github.io/',
+				'Access-Control-Allow-Origin': '*',
 			},
 			crossDomain: true,
-			contentType: 'text/plain',
+			contentType: 'json',
 
 			success   : function(data) { 
 				console.log(data);
