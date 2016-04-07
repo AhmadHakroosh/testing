@@ -9,13 +9,12 @@
 		var data;
 		var request = new XMLHttpRequest();
 		request.open("GET", "http://www.classnamer.com/index.txt", true);
-		request.send();
-
 		request.onreadystatechange = function () {
 			if (request.readyState == 4 && request.status == 200) {
-				data = JSON.parse(request.responseText);
+				data = request.responseText;
 			}
 		};
+		request.send();
 	</script>
 </body>
 </html>
