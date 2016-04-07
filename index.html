@@ -6,15 +6,15 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var data;
-		var request = new XMLHttpRequest();
-		request.open("GET", "http://classnamer.com/");
-		request.onreadystatechange = function () {
-			if (request.readyState == 4 && request.status == 200) {
-				data = request.responseText;
-			}
-		};
-		request.send();
+		$('#container').load('http://google.com'); // SERIOUSLY!
+	
+		$.ajax({
+		    url: 'http://www.classnamer.com/index.txt',
+		    type: 'GET',
+		    success: function(res) {
+		        alert(res.responseText);
+		    }
+		});
 	</script>
 </body>
 </html>
