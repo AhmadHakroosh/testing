@@ -1,1 +1,29 @@
-A new feature has to be added
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$.ajax({
+			url: 'http://classnamer.com/index.txt',
+			type: 'GET',
+			headers: {
+				'Access-Control-Allow-Origin': 'http://193.43.246.250/',
+			},
+			crossDomain: true,
+			contentType: 'text/plain',
+
+			success   : function(data) { 
+				console.log(data);
+			},
+
+			error: function(xhr) {
+				console.log(xhr);
+			}
+		});
+	</script>
+</body>
+</html>
